@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { FiUser, FiPlus, FiSettings, FiLogOut, FiCreditCard } from 'react-icons/fi';
+import { FiUser, FiPlus, FiLogOut, FiCreditCard } from 'react-icons/fi';
 import AddChildForm from '../components/parent/AddChildForm';
 import ChildProfile from '../components/parent/ChildProfile';
 import SubscriptionManagement from '../components/parent/SubscriptionManagement';
@@ -21,14 +21,9 @@ const ParentDashboard = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  // Fetch children on component mount
-  useEffect(() => {
-    fetchChildren();
-  }, []);
-
-  const fetchChildren = async () => {
+  const fetchChildren = useCallback(async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/children`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000'}/api/children`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -46,28 +41,46 @@ const ParentDashboard = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [token]);
+
+  // Fetch children on component mount
+  useEffect(() => {
+    fetchChildren();
+  }, [fetchChildren]);
 
   const handleAddChild = async (childData) => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/children`, {
+      // Create FormData for file upload
+      const formData = new FormData();
+      formData.append('name', childData.name);
+      formData.append('age', childData.age);
+      formData.append('gender', childData.gender);
+      
+      if (childData.profilePicture) {
+        formData.append('profilePicture', childData.profilePicture);
+      }
+
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000'}/api/children`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
+          'Authorization': `Bearer ${token}`
         },
-        body: JSON.stringify(childData)
+        body: formData
       });
 
       if (response.ok) {
         const data = await response.json();
         setChildren([data.data.child, ...children]);
         setError('');
+        setSuccess('Child added successfully!');
+        setTimeout(() => setSuccess(''), 3000);
       } else {
         const errorData = await response.json();
+        setError(errorData.message || 'Failed to add child');
         throw new Error(errorData.message || 'Failed to add child');
       }
     } catch (err) {
+      setError(err.message || 'Network error');
       throw err;
     }
   };
@@ -78,7 +91,7 @@ const ParentDashboard = () => {
     }
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/children/${childId}`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000'}/api/children/${childId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -102,7 +115,7 @@ const ParentDashboard = () => {
 
   const handleRegenerateCode = async (childId) => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/children/${childId}/regenerate-code`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000'}/api/children/${childId}/regenerate-code`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

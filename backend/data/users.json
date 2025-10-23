@@ -20,5 +20,16 @@
     "subscriptionStatus": "trial",
     "createdAt": "2025-10-22T02:27:04.951Z",
     "updatedAt": "2025-10-22T02:27:04.951Z"
+  },
+  {
+    "_id": "2uwpurjx7",
+    "email": "parent@example.com",
+    "password": "$2b$12$h.LlLH2GkEU0hWrE1hJV/e6g2ATxCnT/kvNn6Ul5lRsXwLuYoVz4a",
+    "firstName": "Daniel",
+    "lastName": "Sovilter",
+    "planType": "solo",
+    "subscriptionStatus": "trial",
+    "createdAt": "2025-10-23T09:09:53.394Z",
+    "updatedAt": "2025-10-23T09:09:53.394Z"
   }
 ]

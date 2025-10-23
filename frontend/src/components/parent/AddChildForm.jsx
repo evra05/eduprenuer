@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { useAuth } from '../../context/AuthContext';
 import LoadingSpinner from '../common/LoadingSpinner';
 
 const AddChildForm = ({ onClose, onSubmit }) => {
-  const { user } = useAuth();
   const [formData, setFormData] = useState({
     name: '',
     age: '',
@@ -97,7 +95,7 @@ const AddChildForm = ({ onClose, onSubmit }) => {
         submitData.append('profilePicture', formData.profilePicture);
       }
       
-      const response = await fetch('/api/children', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000'}/api/children`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -107,7 +105,7 @@ const AddChildForm = ({ onClose, onSubmit }) => {
       
       const data = await response.json();
       
-      if (data.success) {
+      if (response.ok && data.success) {
         setSuccess('Child added successfully!');
         setTimeout(() => {
           onSubmit(data.data.child);
@@ -115,6 +113,7 @@ const AddChildForm = ({ onClose, onSubmit }) => {
         }, 1000);
       } else {
         setError(data.message || 'Failed to add child');
+        return; // Don't call onSubmit on error
       }
     } catch (err) {
       setError('Network error. Please try again.');

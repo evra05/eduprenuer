@@ -162,5 +162,33 @@
     "lastActivityAt": "2025-10-23T04:46:30.251Z",
     "createdAt": "2025-10-22T08:16:44.946Z",
     "updatedAt": "2025-10-23T07:58:36.527Z"
+  },
+  {
+    "_id": "90e9v7eki",
+    "parentId": "2uwpurjx7",
+    "name": "Olivia",
+    "age": 6,
+    "gender": "female",
+    "profilePicture": "/uploads/children/default-avatar.svg",
+    "loginCode": "GEQDBDTM",
+    "companyProfile": {
+      "companyName": "Xussss",
+      "businessType": "lemonade-stand",
+      "logo": "",
+      "description": "SACADADSD",
+      "virtualOffice": {
+        "theme": "modern",
+        "decorations": [],
+        "achievements": []
+      }
+    },
+    "preferences": {
+      "difficultyLevel": "beginner",
+      "learningStyle": "visual"
+    },
+    "isActive": true,
+    "createdAt": "2025-10-23T09:10:05.197Z",
+    "updatedAt": "2025-10-23T09:14:38.613Z",
+    "lastActivityAt": "2025-10-23T09:14:29.891Z"
   }
 ]
