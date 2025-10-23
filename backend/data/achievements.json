@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "ach1",
+    "childId": "fyoh3ku14",
+    "achievementType": "module-completion",
+    "title": "First Steps",
+    "description": "Completed your first learning module!",
+    "icon": "🎯",
+    "points": 10,
+    "moduleId": null,
+    "metadata": {},
+    "earnedAt": "2025-10-22T09:00:00.000Z"
+  },
+  {
+    "_id": "ach2",
+    "childId": "fyoh3ku14",
+    "achievementType": "perfect-score",
+    "title": "Quiz Master",
+    "description": "Got a perfect score on a quiz!",
+    "icon": "🏆",
+    "points": 25,
+    "moduleId": null,
+    "metadata": {},
+    "earnedAt": "2025-10-22T09:15:00.000Z"
+  }
+]

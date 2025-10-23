@@ -1,0 +1,166 @@
+[
+  {
+    "_id": "lw5as6rr8",
+    "parentId": "mpe0udfiu",
+    "name": "Test Child",
+    "age": "8",
+    "gender": "male",
+    "profilePicture": null,
+    "loginCode": "YYAC2BOT",
+    "companyProfile": {
+      "companyName": "Super Lemonade Co",
+      "businessType": "lemonade-stand",
+      "logo": "",
+      "description": "The best lemonade in town!",
+      "virtualOffice": {
+        "theme": "modern",
+        "decorations": [],
+        "achievements": []
+      }
+    },
+    "preferences": {
+      "difficultyLevel": "beginner",
+      "learningStyle": "visual"
+    },
+    "isActive": true,
+    "lastActivityAt": "2025-10-23T08:09:23.727Z",
+    "createdAt": "2025-10-22T04:44:53.814Z",
+    "updatedAt": "2025-10-23T08:09:23.728Z"
+  },
+  {
+    "_id": "i7swzebrz",
+    "parentId": "36g1tu2v0",
+    "name": "Evra",
+    "age": "6",
+    "gender": "male",
+    "profilePicture": null,
+    "loginCode": "9REDWBTG",
+    "companyProfile": {
+      "companyName": "",
+      "businessType": "",
+      "logo": "",
+      "description": "",
+      "virtualOffice": {
+        "theme": "modern",
+        "decorations": [],
+        "achievements": []
+      }
+    },
+    "preferences": {
+      "difficultyLevel": "beginner",
+      "learningStyle": "visual"
+    },
+    "isActive": false,
+    "createdAt": "2025-10-22T04:49:43.818Z",
+    "updatedAt": "2025-10-22T08:16:37.137Z"
+  },
+  {
+    "_id": "op3bs6uua",
+    "parentId": "36g1tu2v0",
+    "name": "Olivia",
+    "age": 7,
+    "gender": "male",
+    "profilePicture": "/uploads/children/default-avatar.svg",
+    "loginCode": "HV32LXEY",
+    "companyProfile": {
+      "companyName": "",
+      "businessType": "",
+      "logo": "",
+      "description": "",
+      "virtualOffice": {
+        "theme": "modern",
+        "decorations": [],
+        "achievements": []
+      }
+    },
+    "preferences": {
+      "difficultyLevel": "beginner",
+      "learningStyle": "visual"
+    },
+    "isActive": false,
+    "createdAt": "2025-10-22T08:09:27.656Z",
+    "updatedAt": "2025-10-22T08:16:35.519Z"
+  },
+  {
+    "_id": "my8cf08w2",
+    "parentId": "36g1tu2v0",
+    "name": "Olivia",
+    "age": 7,
+    "gender": "male",
+    "profilePicture": "/uploads/children/default-avatar.svg",
+    "loginCode": "8N6K1FI9",
+    "companyProfile": {
+      "companyName": "",
+      "businessType": "",
+      "logo": "",
+      "description": "",
+      "virtualOffice": {
+        "theme": "modern",
+        "decorations": [],
+        "achievements": []
+      }
+    },
+    "preferences": {
+      "difficultyLevel": "beginner",
+      "learningStyle": "visual"
+    },
+    "isActive": false,
+    "createdAt": "2025-10-22T08:09:28.667Z",
+    "updatedAt": "2025-10-22T08:15:46.356Z"
+  },
+  {
+    "_id": "xupj3537p",
+    "parentId": "36g1tu2v0",
+    "name": "Evra",
+    "age": 9,
+    "gender": "male",
+    "profilePicture": "/uploads/children/default-avatar.svg",
+    "loginCode": "VDJSM9N1",
+    "companyProfile": {
+      "companyName": "",
+      "businessType": "",
+      "logo": "",
+      "description": "",
+      "virtualOffice": {
+        "theme": "modern",
+        "decorations": [],
+        "achievements": []
+      }
+    },
+    "preferences": {
+      "difficultyLevel": "beginner",
+      "learningStyle": "visual"
+    },
+    "isActive": false,
+    "createdAt": "2025-10-22T08:16:43.921Z",
+    "updatedAt": "2025-10-22T08:29:14.589Z"
+  },
+  {
+    "_id": "fyoh3ku14",
+    "parentId": "36g1tu2v0",
+    "name": "Evra",
+    "age": 9,
+    "gender": "male",
+    "profilePicture": "/uploads/children/default-avatar.svg",
+    "loginCode": "XLRIEAIX",
+    "companyProfile": {
+      "companyName": "Zus",
+      "businessType": "lemonade-stand",
+      "logo": "",
+      "description": "Coffee",
+      "virtualOffice": {
+        "theme": "modern",
+        "decorations": [],
+        "achievements": []
+      }
+    },
+    "preferences": {
+      "difficultyLevel": "beginner",
+      "learningStyle": "visual"
+    },
+    "isActive": true,
+    "lastActivityAt": "2025-10-23T04:46:30.251Z",
+    "createdAt": "2025-10-22T08:16:44.946Z",
+    "updatedAt": "2025-10-23T07:58:36.527Z"
+  }
+]
